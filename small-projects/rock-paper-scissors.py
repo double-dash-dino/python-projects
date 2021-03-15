@@ -11,18 +11,16 @@ class Player:
         self.name= input('Hello there, what is your name?')
         self.score= 0
 
-
     def play(self):
         values={'r':'Rock','p':'Paper','s':'Scissors'}
         choice = 'x'
         possible_choices=['r','p','s']
         while choice.lower() not in values:
-
             choice = input('Please select r for rock, p for paper or s for scissors')
-        print(f"You picked {values[choice]}")
+        print(f"{self.name} picked {values[choice]}!")
         return possible_choices.index(choice.lower())
 
-# Create computer class
+# Create computer class with score attribute and "choice" function
 class Computer:
 
     def __init__(self):
@@ -33,6 +31,8 @@ class Computer:
         computer_choice=random.randint(0,2)
         print(f"Computer picked {values[computer_choice]}!")
         return computer_choice
+
+# Create function to pick out the result of a game
 
 def winner(player_choice, computer_choice, player_score, computer_score):
     match = (player_choice, computer_choice)
@@ -61,6 +61,7 @@ def winner(player_choice, computer_choice, player_score, computer_score):
             print( f"{player.name} wins!" )
     print(f"{player.score}, {computer.score}")
 
+# Start of game code
 
 player = Player()
 computer = Computer()
@@ -80,3 +81,4 @@ while game_on ==True:
     else:
         print("Ok bye!")
         game_on=False
+# End of
