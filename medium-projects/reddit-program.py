@@ -39,6 +39,8 @@ top10 = subred.top("week", limit=10)
 
 smtp_object = smtplib.SMTP('smtp.gmail.com', 587)
 
+email_password = getpass.getpass('Please enter your email password')
+
 
 # Sending the email TODO
 
