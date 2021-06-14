@@ -14,3 +14,5 @@ for i in range(0, len(entries)):
     teams_and_entries[entries[i]] = randomTeam
     teams.pop(randomIndex)
 print(teams_and_entries)
+
+# Could have used the zip method instead!!
