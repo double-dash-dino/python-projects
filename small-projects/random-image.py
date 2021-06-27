@@ -1,4 +1,5 @@
 from matplotlib import pyplot
+import numpy
 import random
 
 def get_color_decimal_code():
@@ -22,4 +23,12 @@ def get_full_image():
         full_image.append(get_image_row(size=32))
     return full_image
 
-get_full_image()
+def convert_to_numpy_array(arr):
+    return numpy.array(arr) 
+
+def show_random_image():
+    pyplot.imshow(convert_to_numpy_array(get_full_image))
+
+show_random_image()
+
+
