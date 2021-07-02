@@ -1,5 +1,5 @@
+# Reddit program
 
-//Reddit program//
 To use the reddit program you will need a number of things:
 
 client id: the sorter key found in the summary of your reddit app
